@@ -5,7 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>
-		var today = new Date();
+		var options = {timeZone: 'Asia/Shanghai'}; // 设置时区为北京时间
+		var today = new Date().toLocaleString('en-US', options); // 将本地日期时间转换为北京时间
+		today = new Date(today); // 转换为Date对象
+
 		var year = today.getFullYear();
 		var month = ('0' + (today.getMonth() + 1)).slice(-2); // 使用slice方法确保月份的两位数格式
 		var day = ('0' + today.getDate()).slice(-2); // 使用slice方法确保日期的两位数格式
