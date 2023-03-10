@@ -5,7 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>
-		window.location.href = "https://nodefree.org/dy/2023/03/20230310.txt"; // 替换为您想要重定向的网址
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = ('0' + (today.getMonth() + 1)).slice(-2); // 使用slice方法确保月份的两位数格式
+		var day = ('0' + today.getDate()).slice(-2); // 使用slice方法确保日期的两位数格式
+		var path = year + '/' + month + '/' + year + month + day; // 拼接字符串
+		window.location.href = "https://nodefree.org/dy/"+path+".txt"; // 替换为您想要重定向的网址
 	</script>
 </head>
 <body>
